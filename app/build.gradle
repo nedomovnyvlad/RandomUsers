@@ -57,6 +57,8 @@ dependencies {
 
     implementation libraries.coroutines
 
+    implementation libraries.glide
+
     implementation libraries.constraintLayout
 
     implementation libraries.timber
