@@ -1,4 +1,4 @@
-package com.vnedomovnyi.randomusers.data.remote
+package com.vnedomovnyi.randomusers.data
 
 import com.vnedomovnyi.randomusers.core.data.UserRepository
 import org.koin.dsl.module

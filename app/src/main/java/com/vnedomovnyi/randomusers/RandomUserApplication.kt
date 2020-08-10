@@ -1,7 +1,7 @@
 package com.vnedomovnyi.randomusers
 
 import android.app.Application
-import com.vnedomovnyi.randomusers.data.remote.dataModule
+import com.vnedomovnyi.randomusers.data.dataModule
 import com.vnedomovnyi.randomusers.data.remote.remoteModule
 import com.vnedomovnyi.randomusers.domain.interactorModule
 import org.koin.android.ext.koin.androidContext
