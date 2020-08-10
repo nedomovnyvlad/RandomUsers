@@ -5,7 +5,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: "com.github.ben-manes.versions"
 
 android {
-    compileSdkVersion  versions.compileSdk
+    compileSdkVersion versions.compileSdk
 
     defaultConfig {
         applicationId "com.vnedomovnyi.randomusers"
