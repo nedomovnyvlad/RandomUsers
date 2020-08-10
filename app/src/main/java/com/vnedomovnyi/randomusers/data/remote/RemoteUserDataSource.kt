@@ -8,7 +8,12 @@ class RemoteUserDataSource(private val userService: UserService) : UserDataSourc
 
     override suspend fun getUsers() = userService.getUsers(USER_COUNT).users.map {
         User(
-            it.email
+            it.name.first,
+            it.name.last,
+            it.email,
+            it.location.city,
+            it.location.state,
+            it.picture.largePhotoUrl
         )
     }
 

@@ -11,6 +11,23 @@ interface UserService {
 
     data class GetUsersResponse(@SerializedName("results") val users: List<ApiUser>)
 
-    data class ApiUser(@SerializedName("email") val email: String)
+    data class ApiUser(
+        @SerializedName("name") val name: Name,
+        @SerializedName("email") val email: String,
+        @SerializedName("location") val location: Location,
+        @SerializedName("picture") val picture: Picture
+    )
+
+    data class Name(
+        @SerializedName("first") val first: String,
+        @SerializedName("last") val last: String
+    )
+
+    data class Location(
+        @SerializedName("city") val city: String,
+        @SerializedName("state") val state: String
+    )
+
+    data class Picture(@SerializedName("large") val largePhotoUrl: String)
 
 }
