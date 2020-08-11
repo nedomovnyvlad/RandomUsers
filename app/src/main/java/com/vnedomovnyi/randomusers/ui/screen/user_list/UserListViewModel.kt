@@ -7,6 +7,7 @@ import com.vnedomovnyi.randomusers.core.domain.entity.User
 import com.vnedomovnyi.randomusers.core.domain.interactor.GetUsers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 class UserListViewModel(private val getUsers: GetUsers) : ViewModel() {
 
@@ -15,7 +16,11 @@ class UserListViewModel(private val getUsers: GetUsers) : ViewModel() {
 
     fun fetchUsers() {
         GlobalScope.launch {
-            _usersLiveData.postValue(getUsers())
+            try {
+                _usersLiveData.postValue(getUsers())
+            } catch (t: Throwable) {
+                Timber.e(t, "Failed to load users.")
+            }
         }
     }
 
